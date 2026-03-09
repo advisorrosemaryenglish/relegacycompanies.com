@@ -1,179 +1,228 @@
-/* Reset */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-/* Body */
-
-body{
-background:#070707;
-color:white;
-font-family:'Montserrat',sans-serif;
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #070304;   /* back to original */
+    color: #f5f5f5;
+    font-size: 18px;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
+.container {
+    width: 92%;
+    max-width: 1600px; /* slightly wider so headline fits one line */
+    margin: auto;
+}
 
-/* Full width banner */
+.hero {
+    padding: 80px 0 120px 0;
+}
+
+/* =========================
+   TOP LOGO (SPANNING WIDTH)
+========================= */
 
 .top-banner{
-width:100%;
-height:220px;
-background:#070707; /* keeps the black background */
-display:flex;
-align-items:center;
-justify-content:center;
+    width:100%;
+    text-align:center;
+    margin-bottom:40px;
 }
 
 .top-banner img{
-max-width:100%;
-max-height:100%;
-object-fit:contain;
-display:block;
+    width:100%;
+    max-width:1100px;
+    height:auto;
+    display:block;
+    margin:auto;
+}
+/* =========================
+   FULL WIDTH HEADLINE
+========================= */
+
+.main-headline {
+    text-shadow: 0 0 20px rgba(216, 163, 157, 0.25);
+    text-align: center;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 60px auto 80px auto;
+    max-width: 1100px;
+
+   background: linear-gradient(90deg, #9f5c4f, #c07a6a, #dca59a);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
-/* Main container */
+/* =========================
+   CONTENT ROW (LEFT + RIGHT)
+========================= */
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:40px 20px;
+.content-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
 }
 
-/* Headline */
+/* LEFT SIDE */
 
-.main-headline{
-text-align:center;
-font-family:'Playfair Display',serif;
-font-size:36px;
-letter-spacing:2px;
-color:#e0a899;
-margin-bottom:40px;
+.left-column {
+    flex: 1;
+    max-width: 720px;
 }
 
-
-/* Content layout */
-
-.content-row{
-display:flex;
-align-items:stretch;
-gap:40px;
+.subtext {
+    font-size: 25px;     /* up 1px from 24 */
+    line-height: 1.9;
+    margin-bottom: 45px;
+    color: #ededed;
 }
 
+/* SERVICES GRID */
 
-/* Left side */
-
-.left-column{
-flex:1;
-display:flex;
-flex-direction:column;
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 25px;
 }
 
+.card {
+    background-color: #141822;   /* deep navy */
+    padding: 30px;
+    border-radius: 12px;
 
-/* Paragraph */
-
-.subtext{
-font-size:16px;
-line-height:1.6;
-margin-bottom:25px;
-color:#e3e3e3;
+    border: 1px solid rgba(216, 163, 157, 0.35); /* soft rose edge */
+    transition: all 0.3s ease;
 }
 
-
-/* Blueprint cards */
-
-.services{
-display:flex;
-gap:15px;
-margin-bottom:25px;
+.card:hover {
+    border-color: #d8a39d;
+    box-shadow: 0 0 18px rgba(216, 163, 157, 0.25);
+    transform: translateY(-4px);
 }
 
-.card{
-flex:1;
-background:#111;
-padding:16px;
-border-radius:8px;
-text-align:center;
-border:1px solid #333;
+.card h4 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.5;
 }
 
-.card h4{
-font-size:14px;
-font-weight:600;
+.cta-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 25px 0;
 }
 
+.cta-button {
+    display: inline-block;
+    padding: 18px 42px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
 
-/* CTA Button */
+    color: #070304;
+    background: linear-gradient(90deg, #c07a6a, #dca59a);
+    border-radius: 50px;
 
-.cta-wrapper{
-margin-bottom:25px;
+    box-shadow: 0 8px 25px rgba(216,163,157,0.25);
+    transition: all 0.3s ease;
 }
 
-.cta-button{
-display:inline-block;
-background:#e0a899;
-color:black;
-padding:12px 22px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-font-size:14px;
-transition:0.3s;
+.cta-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(216,163,157,0.4);
 }
 
-.cta-button:hover{
-background:#d89282;
+/* CONTACT */
+
+.contact {
+    font-size: 23px;
+    font-weight: 600;
+    margin-top: 20px;
+    text-align: left;
+    padding: 0;
 }
 
+.label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 8px;
 
-/* Contact */
-
-.contact{
-margin-top:auto;
-font-size:14px;
-line-height:1.8;
+    background: linear-gradient(90deg, #9f5c4f, #c07a6a, #dca59a);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
-.label{
-font-weight:600;
-color:#e0a899;
+.contact p {
+    word-break: break-word;
+    color: #e3b2a6;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
+/* RIGHT SIDE IMAGE */
 
-/* Right column */
-
-.right-column{
-flex:1;
-display:flex;
+.right-column {
+    flex: 1.1;   /* slightly more space than left column */
+    display: flex;
+    justify-content: center;
 }
-
-
-/* Video wrapper */
 
 .video-wrapper{
-width:100%;
-height:100%;
+    position:relative;
+    padding-bottom:56.25%;
+    height:0;
 }
 
 .video-wrapper iframe{
-width:100%;
-height:100%;
-border-radius:8px;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    box-shadow:0 20px 50px rgba(0,0,0,.6);
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
 
-/* Responsive */
+@media (max-width: 900px) {
 
-@media (max-width:900px){
-
-.content-row{
-flex-direction:column;
+ .main-headline {
+    line-height: 1.25;
+    letter-spacing: 0.5px;   
+    padding: 0 24px;          
+    max-width: 100%;
 }
+    
+    .content-row {
+        flex-direction: column;
+        align-items: center;
+        align: center;
+    }
 
-.video-wrapper iframe{
-height:350px;
+    .left-column {
+        max-width: 100%;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+    
+  .video-wrapper {
+    margin-top: 40px;
+    max-width: 420px;
 }
-
 }
