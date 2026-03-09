@@ -182,6 +182,19 @@ transition:.3s;
     -webkit-text-fill-color: transparent;
 }
 
+.contact a{
+color:#e3b2a6;
+text-decoration:none;
+}
+
+.contact a:visited{
+color:#e3b2a6;
+}
+
+.contact a:hover{
+color:#dca59a;
+}
+
 /* Right column */
 
 .right-column{
