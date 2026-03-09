@@ -2,325 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>RE Legacy Companies | Rosemary English</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    :root {
-      --charcoal: #111111;
-      --gold: #d4af37;
-      --white: #ffffff;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background-color: var(--charcoal);
-      color: var(--gold);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    .page-wrapper {
-      min-height: 100vh;
-      background-color: var(--charcoal);
-    }
-
-    /* HERO SECTION */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: var(--gold);
-      background-image: url("city-skyline.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top, rgba(0,0,0,0.4), rgba(0,0,0,0.9));
-    }
-
-    .hero-content {
-      position: relative;
-      padding: 2rem;
-      max-width: 900px;
-      animation: fadeIn 2.5s ease-out forwards;
-      opacity: 0;
-    }
-
-    .logo-placeholder {
-      font-size: 1.4rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-headline {
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      font-weight: 500;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-subtitle {
-      font-size: 0.95rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--white);
-      opacity: 0.8;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 4rem 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      font-size: 1.4rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    .section-text {
-      font-size: 1rem;
-      color: var(--white);
-      max-width: 800px;
-      margin: 0.5rem auto 0;
-      text-align: center;
-    }
-
-    /* VIDEO SECTION */
-    .video-wrapper {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .video-wrapper video {
-      width: 100%;
-      max-width: 800px;
-      border-radius: 10px;
-      display: block;
-      margin: 0 auto 1rem;
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
-    }
-
-    .video-caption {
-      font-size: 1rem;
-      color: var(--gold);
-    }
-
-    /* WHO WE SERVE */
-    .columns {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      margin-top: 1.5rem;
-    }
-
-    .column {
-      padding: 1.5rem;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(212, 175, 55, 0.25);
-    }
-
-    .column-title {
-      font-size: 1.1rem;
-      margin-bottom: 0.75rem;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-
-    .column-text {
-      font-size: 0.98rem;
-      color: var(--white);
-    }
-
-    @media (min-width: 768px) {
-      .columns {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    /* CTA */
-    .cta-wrapper {
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 0.9rem 2.6rem;
-      border-radius: 999px;
-      border: 1px solid var(--gold);
-      background: var(--gold);
-      color: var(--charcoal);
-      font-size: 0.95rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background: transparent;
-      color: var(--gold);
-      box-shadow: 0 0 18px rgba(212, 175, 55, 0.6);
-    }
-
-    /* ANIMATIONS */
-    .slide-section {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-    }
-
-    .slide-section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .slide-left {
-      opacity: 0;
-      transform: translateX(-40px);
-      transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-    }
-
-    .slide-right {
-      opacity: 0;
-      transform: translateX(40px);
-      transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-    }
-
-    .slide-left.visible,
-    .slide-right.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  <title>RE Legacy Companies</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <div class="page-wrapper">
 
-    <!-- HERO -->
-   <div class="hero-content">
-  <img src="relogo.png" alt="RE Legacy Companies Logo" class="hero-logo" />
-  <h1 class="hero-headline">
-    Helping You Build a Stronger Workforce and a More Secure Retirement.
-  </h1>
-  <p class="hero-subtitle">
-    Workforce &amp; Income Strategy Consulting
-  </p>
-</div>
-
-  </header>
-
- <section class="slide-section" id="video-section">
-  <div class="video-wrapper">
-    <div class="video-container">
-      <iframe 
-        src="https://www.youtube.com/embed/IcpjGWZUlqc" 
-        title="Welcome Video"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
+  <!-- HERO BANNER -->
+  <section id="hero-banner">
+    <div class="hero-overlay">
+      <img src="city-banner.jpg" alt="City Skyline Banner" class="hero-image" />
     </div>
+  </section>
 
-    <p class="video-caption">
-      Welcome — I’m Rosemary English. I founded RE Legacy Companies to help people and organizations move forward with clarity and confidence.
+  <!-- VIDEO SECTION -->
+  <section class="slide-section" id="video-section">
+    <div class="video-wrapper">
+      <div class="video-container">
+        <iframe 
+          src="https://www.youtube.com/embed/IcpjGWZUlqc" 
+          title="Welcome Video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <p class="video-caption">
+        Welcome — I’m Rosemary English. I founded RE Legacy Companies to help people and organizations move forward with clarity and confidence.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHO WE SERVE -->
+  <section id="who-we-serve">
+    <h2 class="section-heading">WHO WE SERVE</h2>
+
+    <div class="serve-grid">
+      <div class="serve-box">
+        <h3>EMPLOYERS</h3>
+        <p>
+          Retirement Equality provides tools to help your employees and your organization prepare for secure retirement by assessing and improving retirement stability.
+        </p>
+      </div>
+
+      <div class="serve-box">
+        <h3>INDIVIDUALS</h3>
+        <p>
+          If you are concerned about your future or that of your family, Retirement Equality provides tools and education to help you prepare for secure retirement and make strategic decisions that strengthen long-term security.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IT MATTERS -->
+  <section id="why-it-matters">
+    <h2 class="section-heading">WHY IT MATTERS</h2>
+    <p class="why-text">
+      When employees lack financial security, they face higher levels of stress.<br>
+      When stress affects health and productivity, it can impact the bottom line.<br>
+      We help organizations address this critical concern.
     </p>
-  </div>
-</section>
+  </section>
 
-    <!-- WHO WE SERVE -->
-    <section class="slide-section" id="who-we-serve">
-      <h2 class="section-title">Who We Serve</h2>
-      <div class="columns">
-        <div class="column slide-left">
-          <h3 class="column-title">Employers</h3>
-          <p class="column-text">
-            Your workforce is your greatest asset. I help you strengthen it through strategies that reduce stress,
-            improve retention, and support long‑term stability.
-          </p>
-        </div>
-        <div class="column slide-right">
-          <h3 class="column-title">Individuals</h3>
-          <p class="column-text">
-            If you’re nearing retirement, you deserve a plan that protects your income and gives you confidence about
-            the future. I help you understand your options and build a strategy that supports long‑term security.
-          </p>
-        </div>
-      </div>
-    </section>
+  <!-- CTA BUTTON -->
+  <section id="cta-section">
+    <a href="#" class="cta-button">SCHEDULE A STRATEGY SESSION</a>
+  </section>
 
-    <!-- WHY IT MATTERS -->
-    <section class="slide-section" id="why-it-matters">
-      <h2 class="section-title">Why It Matters</h2>
-      <p class="section-text">
-        When employees feel financially secure, they show up better at work.
-      </p>
-      <p class="section-text">
-        When individuals feel confident about retirement, they make better decisions.
-      </p>
-      <p class="section-text">
-        My work supports both sides of that equation.
-      </p>
-    </section>
-
-    <!-- CTA -->
-    <section class="slide-section" id="cta">
-      <div class="cta-wrapper">
-        <a href="#contact" class="cta-button">Schedule a Strategy Session</a>
-      </div>
-    </section>
-
-  </div>
-
-  <script>
-    // Slow, elegant slide-in on scroll
-    const observerOptions = {
-      threshold: 0.2
-    };
-
-    const revealOnScroll = (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(revealOnScroll, observerOptions);
-
-    document.querySelectorAll('.slide-section, .slide-left, .slide-right').forEach(el => {
-      observer.observe(el);
-    });
-  </script>
 </body>
-<html>
+</html>
+
+
 
