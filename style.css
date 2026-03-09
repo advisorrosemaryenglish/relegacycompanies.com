@@ -29,16 +29,19 @@ body {
    TOP LOGO (SPANNING WIDTH)
 ========================= */
 
-.top-brand {
-    text-align: center;
-    margin-bottom: 50px;
+.top-banner{
+    width:100%;
+    text-align:center;
+    margin-bottom:40px;
 }
 
-.top-brand img {
-    max-width: 600px;   /* bigger presence */
-    width: 100%;
+.top-banner img{
+    width:100%;
+    max-width:1100px;
+    height:auto;
+    display:block;
+    margin:auto;
 }
-
 /* =========================
    FULL WIDTH HEADLINE
 ========================= */
