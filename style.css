@@ -164,21 +164,22 @@ transition:.3s;
     padding: 0;
 }
 
-.label {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-right: 8px;
-
-    background: linear-gradient(90deg, #9f5c4f, #c07a6a, #dca59a);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
-
 .contact p {
-    word-break: break-word;
     color: #e3b2a6;
     font-weight: 600;
     letter-spacing: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    background: linear-gradient(90deg, #9f5c4f, #c07a6a, #dca59a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Right column */
