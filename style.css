@@ -81,10 +81,17 @@ body {
     color: #fff;
 }
 
-/* BUTTON */
+/* CTA + CONTACT GROUP */
+.cta-contact-group {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+/* CTA */
 .cta-wrapper {
-    margin: 30px 0;
-    text-align: center;
+    margin: 30px 0 20px 0;
+    text-align: left;
 }
 
 .cta-button {
@@ -94,16 +101,16 @@ body {
     border-radius: 30px;
     text-decoration: none;
     display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 /* CONTACT */
 .contact {
-    margin-top: 25px;
     color: #e3b2a6;
-    text-align: left;              /* 👈 key change */
-    width: fit-content;            /* 👈 prevents full stretch */
-    margin-left: auto;
-    margin-right: auto;            /* 👈 keeps it centered as a block */
+    text-align: left;
 }
 
 .contact-row {
