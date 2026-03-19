@@ -164,6 +164,16 @@ transition:.3s;
     padding: 0;
 }
 
+.address-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.address-text {
+  line-height: 1.5;
+}
+
 .contact p {
     color: #e3b2a6;
     font-weight: 600;
