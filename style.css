@@ -56,7 +56,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-     align-items: center;
+     align-items: flex-start;
 }
 
 /* CARDS */
@@ -87,10 +87,10 @@ body {
 
 /* CTA + CONTACT GROUP */
 .cta-contact-group {
-    margin-top: 50px;          /* 👈 Increased spacing from the cards */
+    margin-top: 40px;        /* Spacing below the cards */
     display: flex;
     flex-direction: column;
-    align-items: center;      /* Centers the group between the cards */
+    align-items: flex-start; /* 👈 Flush with the left edge of the cards */
     width: 100%;
 }
 
@@ -102,8 +102,11 @@ body {
 }
 
 .cta-wrapper {
-    margin-bottom: 40px;    /* Adds the space you wanted */
+    width: 100%;
+    text-align: left;        /* Aligns button to the left */
+    margin-bottom: 35px;     /* Space before the address starts */
 }
+
 
 .cta-button {
     background: #e3b2a6;
@@ -120,8 +123,7 @@ body {
 .contact {
     color: #e3b2a6;
     width: 100%;
-    max-width: 520px;         /* 👈 Matches CTA width exactly */
-    text-align: left;         /* Ensures text stays left-aligned */
+    text-align: left;        /* Aligns address text to the left */
 }
 
 .contact-row {
@@ -138,10 +140,12 @@ body {
 
 .content-row {
     display: flex;
-    gap: 40px;              /* 👈 Reduced from 100px to keep things tighter */
-    align-items: stretch; 
-    justify-content: center; /* 👈 Centers the two main columns on the screen */
+    gap: 40px;               /* Space between your info and the video */
+    align-items: stretch;    /* 👈 Keeps the video the same height as your text */
+    justify-content: center; /* Centers the two main columns on the screen */
     width: 100%;
+    max-width: 1200px;       /* Keeps the layout from getting too wide on big monitors */
+    margin: 0 auto;
 }
 
 .label {
