@@ -54,6 +54,7 @@ body {
     display: flex;
     gap: 50px;
     align-items: flex-start;
+    justify-content: space-between;
 }
 
 /* LEFT */
@@ -83,8 +84,8 @@ body {
 
 /* CTA + CONTACT GROUP */
 .cta-contact-group {
-    max-width: 420px;
-    margin: 0; /* 👈 remove auto centering */
+    width: 100%;
+    max-width: 100%;
 }
 
 /* CTA */
@@ -119,7 +120,7 @@ body {
 }
 
 .label {
-    min-width: 110px;              /* 👈 brings back alignment */
+    min-width: 120px;  /* updated from 110px */
     font-weight: 600;
     letter-spacing: 0.5px;
 }
