@@ -172,11 +172,7 @@ body {
 
 /* MOBILE */
 @media (max-width: 700px) {
-    
-.cta-contact-group {
-        align-items: center;    /* Keeps everything centered on the screen */
-        margin-top: 30px;       /* Adds breathing room below the video/cards */
-    }
+
     .content-row {
         flex-direction: column;
         align-items: center;
@@ -212,14 +208,5 @@ body {
         gap: 4px;
         margin-bottom: 20px;    /* More space between Address, Email, and Phone */
     }
-    
-    .label {
-        font-size: 12px;        /* Slightly smaller labels for mobile */
-        letter-spacing: 1px;
-    }
-
-    .value {
-        font-size: 16px;        /* Standard readable size for mobile */
-        line-height: 1.4;
     }
 }
