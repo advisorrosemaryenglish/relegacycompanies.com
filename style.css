@@ -118,10 +118,9 @@ body {
 /* CONTACT */
 .contact {
     color: #e3b2a6;
-    text-align: center;   /* 👈 IMPORTANT: restores original alignment */
+    text-align: center;   
     width: 100%;
     max-width: 520px;   /* 👈 same width as cards */
-    margin: 0;           /* remove any auto centering */
     align-self: flex-start;
 }
 
