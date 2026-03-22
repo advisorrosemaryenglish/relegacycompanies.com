@@ -99,7 +99,7 @@ body {
     width: 100%;
     max-width: 520px;         /* Matches cards width */
     text-align: left;         /* 👈 Aligns button to the left side of this 520px area */
-    margin-bottom: 30px;      /* 👈 Space between button and Address */
+    margin-bottom: 35px;      /* 👈 Space between button and Address */
 }
 
 .cta-button {
@@ -111,7 +111,6 @@ body {
     display: inline-block;
     font-weight: 700;
     letter-spacing: 1px;
-    text-align: center;
 }
 
 /* CONTACT */
@@ -124,9 +123,9 @@ body {
 
 .contact-row {
     display: grid;
-    grid-template-columns: 95px 1fr; /* 👈 Uniform width for ADDRESS, EMAIL, PHONE */
+    grid-template-columns: 100px 1fr; /* 👈 Uniform width for ADDRESS, EMAIL, PHONE */
     gap: 10px;
-    margin-bottom: 12px;       /* Adds breathing room between rows */
+    margin-bottom: 15px;       /* Adds breathing room between rows */
 }
 
 .address {
