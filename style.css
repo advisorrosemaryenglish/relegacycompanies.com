@@ -87,7 +87,7 @@ body {
 
 /* CTA + CONTACT GROUP */
 .cta-contact-group {
-    margin-top: 50px;        /* Spacing below the cards */
+    margin-top: 60px;        /* Spacing below the cards */
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -120,8 +120,6 @@ body {
 /* CONTACT */
 .contact {
     color: #e3b2a6;
-    width: 100%;
-    text-align: left;        /* Aligns address text to the left */
 }
 
 .contact-row {
