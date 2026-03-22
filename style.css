@@ -53,9 +53,9 @@ body {
 .content-row {
     display: flex;
     gap: 120px;
-    align-items: center; /* 👈 CHANGE THIS BACK */
+    align-items: center;
     justify-content: space-between;
-    flex-wrap: nowrap; /* 👈 forces columns to stay side-by-side */
+    flex-wrap: nowrap;
 }
 
 /* LEFT */
@@ -82,6 +82,14 @@ body {
     border: 1px solid #e3b2a6;
     text-decoration: none;
     color: #fff;
+     display: block; /* IMPORTANT */
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    border-color: #fff;
 }
 
 /* CTA + CONTACT GROUP */
@@ -142,9 +150,13 @@ body {
     max-width: 500px;
 }
 
+.video-wrapper {
+    width: 100%;
+}
+
 .video-wrapper iframe {
-    max-width: 420px;
-    height: 300px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
     border-radius: 10px;
     border: none;
 }
