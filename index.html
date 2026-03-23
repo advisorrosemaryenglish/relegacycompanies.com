@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -31,63 +30,118 @@
 
    <div class="content-row">
 
-  <!-- LEFT SIDE -->
-  <div class="left-column">
+    <!-- LEFT SIDE -->
+    <div class="left-column">
 
-    <div class="services">
-      <a href="workforce-stability.html" class="card">Workforce Stability Blueprint™</a>
-      <a href="lifestyle-protection.html" class="card">Lifestyle Protection Blueprint™</a>
-    </div>
+      <div class="services">
+        <!-- CLICKABLE CARD 1 -->
+        <div class="card" onclick="toggleCard(this)">
+            <h4>Workforce Stability Blueprint™</h4>
+            <div class="card-content">
+                <p>A comprehensive strategy designed to strengthen retention, protect business continuity, and align financial structures with long-term organizational objectives.</p>
+                <ul>
+                    <li>Employer-sponsored benefit optimization</li>
+                    <li>Cost containment strategies</li>
+                    <li>Key person insurance evaluation</li>
+                    <li>Executive retention planning</li>
+                    <li>Workforce engagement solutions</li>
+                    <li>Financial recovery consultation</li>
+                    <li>Corporate asset repositioning</li>
+                </ul>
+            </div>
+        </div>
 
-    <div class="cta-contact-group">
-
-      <div class="cta-wrapper">
-        <a href="#" class="cta-button">
-          Schedule a Strategy Conversation
-        </a>
+        <!-- CLICKABLE CARD 2 -->
+        <div class="card" onclick="toggleCard(this)">
+            <h4>Lifestyle & Income Protection Blueprint™</h4>
+            <div class="card-content">
+                <p>A personalized income protection and asset optimization framework designed to safeguard earnings and create dependable long-term stability.</p>
+                <ul>
+                    <li>Retirement income structuring</li>
+                    <li>Annuity design strategies</li>
+                    <li>Life settlement evaluation</li>
+                    <li>Liquidity planning</li>
+                    <li>Risk mitigation integration</li>
+                    <li>Income continuity planning</li>
+                </ul>
+            </div>
+        </div>
       </div>
 
-      <div class="contact">
+      <div class="cta-contact-group">
+        <div class="cta-wrapper">
+          <a href="mailto:renglish@relegacycompanies.com" class="cta-button">
+            Schedule a Strategy Conversation
+          </a>
+        </div>
 
-  <div class="contact-row">
-    <span class="label">ADDRESS:</span>
-    <span class="value address">
-      <span>1601 E. Lamar Blvd.</span>
-      <span>Ste 214 Unit 1161</span>
-      <span>Arlington, TX 76011</span>
-    </span>
-  </div>
+        <div class="contact">
+          <div class="contact-row">
+            <span class="label">ADDRESS:</span>
+            <span class="value address">
+              <span>1601 E. Lamar Blvd.</span>
+              <span>Ste 214 Unit 1161</span>
+              <span>Arlington, TX 76011</span>
+            </span>
+          </div>
+          <div class="contact-row">
+            <span class="label">EMAIL:</span>
+            <span class="value">renglish@relegacycompanies.com</span>
+          </div>
+          <div class="contact-row">
+            <span class="label">PHONE:</span>
+            <span class="value">817-877-6542</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <div class="contact-row">
-    <span class="label">EMAIL:</span>
-    <span class="value">renglish@relegacycompanies.com</span>
-  </div>
-
-  <div class="contact-row">
-    <span class="label">PHONE:</span>
-    <span class="value">817-877-6542</span>
-  </div>
-
-</div>
-
+    <!-- RIGHT SIDE (VIDEO) -->
+    <div class="right-column">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/8dW3BIzHCPo"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
 
   </div>
-
-  <!-- RIGHT SIDE (VIDEO) -->
-  <div class="right-column">
-    <div class="video-wrapper">
-      <iframe
-        src="https://www.youtube.com/embed/8dW3BIzHCPo"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-
-</div>
-
   </div>
 </section>
+
+<!-- JAVASCRIPT FOR CLICKABLE CARDS -->
+<script>
+function toggleCard(selectedCard) {
+    const allCards = document.querySelectorAll(".card");
+
+    allCards.forEach(card => {
+        const content = card.querySelector(".card-content");
+        if (card !== selectedCard) {
+            card.classList.remove("active");
+            if(content) content.style.height = "0px";
+        }
+    });
+
+    const content = selectedCard.querySelector(".card-content");
+
+    if (selectedCard.classList.contains("active")) {
+        content.style.height = content.scrollHeight + "px";
+        requestAnimationFrame(() => {
+            content.style.height = "0px";
+        });
+        selectedCard.classList.remove("active");
+    } else {
+        selectedCard.classList.add("active");
+        content.style.height = "auto";
+        const height = content.scrollHeight + "px";
+        content.style.height = "0px";
+        requestAnimationFrame(() => {
+            content.style.height = height;
+        });
+    }
+}
+</script>
 
 </body>
 </html>
