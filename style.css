@@ -183,7 +183,7 @@ body {
 
 .value {
     line-height: 1.6;
-    color: #fff; /* Addresses white, labels tan */
+    color: #e3b2a6; /* This makes the white text peach */
 }
 
 .address {
